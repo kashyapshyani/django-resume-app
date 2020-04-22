@@ -1,0 +1,159 @@
+{% extends 'app.html' %}
+
+{% block title %} Create New Resume {% endblock %}
+
+{% block content %}
+
+<div style="height:40px;"></div>
+<div class="assessment-container">
+   <div class="row">
+       <div class="col-md-6 col-md-offset-2 form-box">
+           <form role="form" method="post" class="registration-form" action="{% url 'create_resume' %}">
+               <fieldset>
+                   <div class="form-top">
+                       <div class="form-top-left">
+                           <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>Your Personal Info</h3>
+                           <p>
+                               Fill up with your valid info
+                           </p>
+                       </div>
+                   </div>
+                   <div class="form-bottom" style="background-color:#eceff1">
+                       <div class="row">
+                           <div class="form-group col-md-6 col-sm-6">
+                               <input type="text" name="first_name" class="form-control" placeholder="First name" id="first_name" required>
+                           </div>
+                           <div class="form-group col-md-6 col-sm-6">
+                               <input type="text" name="last_name" class="form-control" placeholder="Last name" id="last_name">
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <input type="text" name="address" placeholder="Address" class="form-control" id="address" required>
+                       </div>
+                       <div class="form-group">
+                           <input type="date" class="form-control" id="pref_date" placeholder="Date of Birth (DD/MM/YYYY)">
+                       </div>
+                       <div class="form-group">
+                           <input type="text" name="father" placeholder="Father name" class="form-control" required>
+                       </div>
+                       <div class="form-group">
+                           <input type="text" name="mother" placeholder="Mother name" class="form-control" required>
+                       </div>
+                       <div class="form-group">
+                           <input type="text" name="cgpa" placeholder="CGPA" class="form-control"  required>
+                       </div>
+                       <div class="form-group">
+                           <input type="text" name="nationality" placeholder="Nationality" class="form-control" required>
+                       </div>
+                       <div class="form-group" style="margin-bottom:3px;">
+                           <div class="row">
+                               <div class="form-group col-md-3 col-sm-3">
+                                   <select class="form-control" style="color:#6a1b9a" required>
+                                       <option>00</option>
+                                       <option>91</option>
+                                       <option>80</option>
+                                       <option>05</option>
+                                       <option>41</option>
+                                   </select>
+                               </div>
+                               <div class="form-group col-md-9 col-sm-9">
+                                   <input type="text" name="phone_no" class="form-control" placeholder="Contact Number" id="contact_number">
+                               </div>
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <input type="text" name="email" placeholder="Email" class="form-email form-control" id="email" required>
+                       </div>
+
+                       <div class="form-group">
+                           <select class="form-control" style="color:#6a1b9a;" required>
+                               <option>Gender</option>
+                               <option>Male</option>
+                               <option>Female</option>
+                           </select>
+                       </div>
+
+                       <button type="button" class="btn btn-next">Next</button>
+                   </div>
+               </fieldset>
+               <fieldset>
+                   <div class="form-top">
+                       <div class="form-top-left">
+                           <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span> Work Experience</h3>
+                           <p>
+                               Fill up with your Work Experiences
+                           </p>
+                       </div>
+                   </div>
+                   <div class="form-bottom">
+                       <div class="form-group">
+                           <input type="text" name="company_name" placeholder="Company name" class="form-control"  required>
+                       </div>
+                       <div class="form-group">
+                           <input type="text" name="job_title" placeholder="Job title" class="form-control"  required>
+                       </div>
+                       <div class="form-group">
+                           <input type="date" name="joining_year" class="form-control" placeholder="Joining year" id="pref_date">
+                       </div>
+                       <div class="form-group">
+                           <textarea name="job_description" class="form-control" placeholder="Joining year">
+                           </textarea>
+                       </div>
+                       <button type="button" class="btn btn-previous">Previous</button>
+                       <button type="button" class="btn btn-next">Next</button>
+                   </div>
+               </fieldset>
+               <fieldset>
+                   <div class="form-top">
+                       <div class="form-top-left">
+                           <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span> Education</h3>
+                           <p>
+                               Fill up with your Education
+                           </p>
+                       </div>
+                   </div>
+                   <div class="form-bottom">
+                       <div class="form-group">
+                           <input type="text" name="institute_name" placeholder="Institute name" class="form-control"  required>
+                       </div>
+                       <div class="form-group">
+                           <input type="text" name="subject" placeholder="Subject" class="form-control"  required>
+                       </div>
+                       <div class="form-group">
+                           <input type="date" name="year" class="form-control" placeholder="Year" id="pref_date" required="true">
+                       </div>
+                       <div class="form-group">
+                           <textarea name="description" class="form-control" placeholder="Description">
+                           </textarea>
+                       </div>
+                       <button type="button" class="btn btn-previous">Previous</button>
+                       <button type="button" class="btn btn-next">Next</button>
+                   </div>
+               </fieldset>
+               <fieldset>
+                   <div class="form-top">
+                       <div class="form-top-left">
+                           <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span> Skills</h3>
+                           <p>
+                               Fill up with your Skills
+                           </p>
+                       </div>
+                   </div>
+                   <div class="form-bottom">
+                       <div class="form-group">
+                           <input type="text" name="language_skills" placeholder="Language Skill" class="form-control"  required>
+                       </div>
+                       <div class="form-group">
+                           <input type="text" name="other_skills" placeholder="Other Skills" class="form-control"  required>
+                       </div>
+                       {% csrf_token %}
+                       <button type="button" class="btn btn-previous">Previous</button>
+                       <button type="submit" class="btn">Submit</button>
+                   </div>
+               </fieldset>
+           </form>
+       </div>
+   </div>
+</div>
+
+{% endblock %}
